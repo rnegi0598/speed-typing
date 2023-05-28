@@ -7,3 +7,5 @@ export const sentences = [
   "kjaslgfdah",
   "shljgdakaf",
 ];
+
+export const countdown=60; //sec

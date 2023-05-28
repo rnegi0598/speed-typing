@@ -4,10 +4,10 @@ import Navbar from "./components/navbar/Navbar";
 import TypingInput from "./components/typingInput/TypingInput";
 import TypingChallenge from "./components/typingChallenge/TypingChallenge";
 import TypingResult from "./components/typingResult/TypingResult";
-
+import { countdown } from "./utils/typingGameUtils";
 const App = () => {
   const [timer, setTimer] = useState(false);
-  const [seconds, setSeconds] = useState(30);
+  const [seconds, setSeconds] = useState(countdown);
   const [index, setIndex] = useState(0);
   const [value, setValue] = useState("");
   const [result, setResult] = useState({correct:0,incorrect:0});
@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     let timerId = -1;
     if (timer) {
-      setSeconds(30);
+      setSeconds(countdown);
       timerId = setInterval(() => {
         setSeconds((prevSeconds) => {
           if (prevSeconds == 0) {

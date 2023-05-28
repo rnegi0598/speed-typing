@@ -1,8 +1,9 @@
 import React from "react";
 import "./typingResult.scss";
+import { countdown } from "../../utils/typingGameUtils";
 const TypingResult = ({ result, seconds }) => {
   const { correct, incorrect } = result;
-  const time = 30 - seconds;
+  const time = countdown - seconds;
   const totalWords = correct + incorrect;
   const wpm = time === 0 ? 0 : Math.floor((totalWords * 60) / 5 / time);
   const accuracy = Number.isNaN((correct / totalWords) * 100)
