@@ -1,5 +1,5 @@
 import React from "react";
-import { sentences } from "../../utils/typingGameUtils";
+import { sentences } from "../../data/typingGameUtils";
 import "./typingchallenge.scss";
 const TypingChallenge = ({ index, value }) => {
   const completed = sentences[index].slice(0, value.length);

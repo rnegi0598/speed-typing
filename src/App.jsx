@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import TypingInput from "./components/typingInput/TypingInput";
 import TypingChallenge from "./components/typingChallenge/TypingChallenge";
 import TypingResult from "./components/typingResult/TypingResult";
-import { countdown } from "./utils/typingGameUtils";
+import { countdown } from "./data/typingGameUtils";
 const App = () => {
   const [timer, setTimer] = useState(false);
   const [seconds, setSeconds] = useState(countdown);

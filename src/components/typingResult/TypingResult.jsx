@@ -1,6 +1,6 @@
 import React from "react";
 import "./typingResult.scss";
-import { countdown } from "../../utils/typingGameUtils";
+import { countdown } from "../../data/typingGameUtils";
 const TypingResult = ({ result, seconds }) => {
   const { correct, incorrect } = result;
   const time = countdown - seconds;

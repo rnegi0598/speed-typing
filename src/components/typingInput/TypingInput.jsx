@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./typinginput.scss";
-import { sentences } from "../../utils/typingGameUtils";
+import { sentences } from "../../data/typingGameUtils";
 
 const TypingInput = ({
   index,
