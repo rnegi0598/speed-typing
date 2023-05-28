@@ -15,7 +15,10 @@ const TypingInput = ({
   const [incorrect, setIncorrect] = useState(0);
   const inputHandler = (e) => {
     const inputValue = e.target.value;
-    if (sentences[index].includes(inputValue)) {
+    if (!inputValue) {
+      return;
+    }
+    if (sentences[index].startsWith(inputValue)) {
       setCorrect((prevCount) => prevCount + 1);
       setValue(inputValue);
     } else {
@@ -35,10 +38,12 @@ const TypingInput = ({
   };
   const startGame = () => {
     setTimer(true);
+    setCorrect(0);
+    setIncorrect(0);
+    setResult({ correct, incorrect });
   };
   return (
     <div className="input-wrapper">
-      {/* <div>{value}</div> */}
       <input
         ref={inputRef}
         value={value}

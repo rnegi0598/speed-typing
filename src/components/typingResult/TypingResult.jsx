@@ -4,7 +4,7 @@ const TypingResult = ({ result, seconds }) => {
   const { correct, incorrect } = result;
   const time = 30 - seconds;
   const totalWords = correct + incorrect;
-  const wpm = time === 0 ? 0 : Math.floor(totalWords / time);
+  const wpm = time === 0 ? 0 : Math.floor((totalWords * 60) / 5 / time);
   const accuracy = Number.isNaN((correct / totalWords) * 100)
     ? 0
     : Math.floor((correct / totalWords) * 100);

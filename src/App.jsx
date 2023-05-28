@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { sentences } from "./utils/paragraph";
 import "./App.scss";
 import Navbar from "./components/navbar/Navbar";
 import TypingInput from "./components/typingInput/TypingInput";
